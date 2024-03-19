@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%Load mhchem using some package options
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{chemfig}
+\begin{document}
+
+\chemfig{*6((=O)-N(-H)-(*7(-N=-N(-H)-))=-(=O)-N(-H)-)}
+\subsection*{Simple molecules}
+
+\begin{itemize}
+\item something: \ce{ Fe(CN)_{$\frac{ \iint_V \mu(u,v) \,du\,dv }{2}$} }
+\item Water: \verb|\ce{H2O}|, \ce{H2O}
+\item Benzene: \verb|\ce{C6H6}|, \ce{C6H6}
+\item Hydrogen peroxide: \verb|\ce{H2O2}|, \ce{H2O2}
+\item Acetic acid: \verb|\ce{C2H4O2}|, \ce{C2H4O2}
+\item Glucose: \verb|\ce{C6H12O6}|, \ce{C6H12O6}
+\end{itemize}
+
+\subsection*{Chemical equations}
+
+Two basic examples:
+
+\begin{itemize}
+\item \verb|\ce{2H2 + O2 -> 2H2O}| typesets \ce{2H2 + O2 -> 2H2O}
+\item \verb|\ce{CO2 + C -> 2 CO}| typesets \ce{CO2 + C -> 2 CO}
+\end{itemize}
+
+\subsection*{A more complex example}
+
+Writing \verb|\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}| typesets this:\vskip10pt
+\noindent \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}.
+
+\subsection*{A math mode example}
+
+Chemical expressions can be typeset using math mode commands such as \verb|\frac|. \vskip10pt
+
+\noindent Writing \verb|\[K=\frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}\]| produces this:
+
+\[K=\frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}\]
+\end{document}
